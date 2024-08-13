@@ -1,0 +1,16 @@
+# Makefile para compilar o código da fila
+
+CC = gcc
+CFLAGS = -Wall
+
+all: fila
+
+fila: main.o
+	$(CC) $(CFLAGS) -o fila main.o
+
+main.o: main.c
+	$(CC) $(CFLAGS) -c main.c
+
+clean:
+	rm -f *.o fila
+
